@@ -9,10 +9,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Class Plant
+ * Class Gallery_model
  */
 
-class Plant extends Base_Model
+class Gallery_model extends Base_Model
 {
 	function __construct()
 	{
@@ -47,7 +47,7 @@ class Plant extends Base_Model
 				'id' => $id
 			);
 			return $response;
-			
+
 		} else {
 			error_log('Error, Undefined variabled: $id');
 			return false;

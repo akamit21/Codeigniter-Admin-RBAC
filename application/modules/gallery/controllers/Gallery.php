@@ -2,17 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
- * Park Online Management - Admin Portal
  *
  * @author		Amit Kumar
  * @copyright	Copyright (c) 2019
  */
 
 /**
- * Class Plants
+ * Class Gallery
  */
 
-class Plants extends Base_Controller
+class Gallery extends Base_Controller
 {
 	/**
 	 * Permissions_Controller constructor.
@@ -191,7 +190,7 @@ class Plants extends Base_Controller
 				$_FILES['file']['type'] = $value['type'][$i];
 				$_FILES['file']['tmp_name'] = $value['tmp_name'][$i];
 				$_FILES['file']['error'] = $value['error'][$i];
-				$_FILES['file']['size'] = $value['size'][$i];   
+				$_FILES['file']['size'] = $value['size'][$i];
 				$config = array(
 					'upload_path' => $file_path.$folder,
 					'log_threshold' => 1,
@@ -202,7 +201,7 @@ class Plants extends Base_Controller
 					'detect_mime' => true,
 					'overwrite' => false
 				);
-				
+
 				$this->load->library('upload', $config);
 				//$this->upload->do_upload();
 				if(!$this->upload->do_upload('file')) {
